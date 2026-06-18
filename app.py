@@ -74,12 +74,11 @@ fig_standing.update_layout(
     paper_bgcolor="rgba(0,0,0,0)",
 )
 # Highlight Chelsea
-fig_standing.add_vline(
-    x="Chelsea FC",
-    line_color="#034694",
-    line_width=3,
-    annotation_text="Chelsea",
-    annotation_position="top"
+fig_standing.update_traces(
+    marker_color=[
+        "#034694" if t == "Chelsea FC" else "#90AFC5"
+        for t in standings_df.head(20)["team"]
+    ]
 )
 st.plotly_chart(fig_standing, use_container_width=True)
 
