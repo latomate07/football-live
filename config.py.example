@@ -1,0 +1,20 @@
+# ── Football Pipeline · Config (exemple) ────────────────────
+# Copier ce fichier en config.py et renseigner les valeurs
+
+# football-data.org — clé gratuite sur https://www.football-data.org/
+API_KEY = "REMPLACE_PAR_TA_CLE"
+API_BASE = "https://api.football-data.org/v4"
+
+# Premier League = PL
+COMPETITION = "PL"
+
+# Kafka
+KAFKA_BROKER = "localhost:9092"
+KAFKA_TOPIC  = "match-events"
+
+# PostgreSQL
+DB_HOST = "localhost"
+DB_PORT = 5432
+DB_NAME = "football"
+DB_USER = "football_user"
+DB_PASS = "football_pass"
